@@ -6,11 +6,12 @@ title: Schematic
 
 This schematic is design to support .... (highlight functionally, power, and controller).
 
+<img width="1341" height="944" alt="image" src="https://github.com/user-attachments/assets/bdf3a83e-eb18-4da3-80b9-3481b5dc15e5" />
 
-![schematic][SchematicDesign_RW.pdf](https://github.com/user-attachments/files/23047813/SchematicDesign_RW.pdf) {style width:"350" height:"300;"}
+![schematic](https://github.com/user-attachments/files/23047813/SchematicDesign_RW.pdf)
 **Figure ##:** Showing a example schematic.
 
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](ExampleSchematic.pdf)
+The schematic as a PDF download is available [[*here*](ExampleSchematic.pdf)](https://github.com/user-attachments/files/23047813/SchematicDesign_RW.pdf)
