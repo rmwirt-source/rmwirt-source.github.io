@@ -3,9 +3,8 @@ title: Power Budget
 ---
 
 ## Overview
-Write a overview of what you did and why you did a Power Budget.
+For my power budget I went through the components of my design and looked at their 
 
-> Capture your power budge as a image to display. Take time to get clean breaks and a well organized layout.
 
 ![budget1](PowerBudgetRW1.jpg)
 
