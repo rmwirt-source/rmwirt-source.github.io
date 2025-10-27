@@ -8,8 +8,8 @@ This schematic is design to support .... (highlight functionally, power, and con
 
 <img width="1341" height="944" alt="image" src="https://github.com/user-attachments/assets/bdf3a83e-eb18-4da3-80b9-3481b5dc15e5" />
 
-![schematic](https://github.com/user-attachments/files/23047813/SchematicDesign_RW.pdf)
-**Figure ##:** Showing a example schematic.
+[schematic](https://github.com/user-attachments/files/23047813/SchematicDesign_RW.pdf)
+**Figure 01:**
 
 
 ## Resouces
