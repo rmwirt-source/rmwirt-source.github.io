@@ -7,14 +7,11 @@ Write a overview of what you did and why you did a Power Budget.
 
 > Capture your power budge as a image to display. Take time to get clean breaks and a well organized layout.
 
-![budget1](<img width="1054" height="815" alt="image" src="https://github.com/user-attachments/assets/574d6e8d-ab39-4e5c-9585-b5a05bf96346" />
-){style width:"350" height:"300;"}
+![budget1](PowerBudgetRW1.jpg)
 
-![budget2](<img width="1056" height="815" alt="image" src="https://github.com/user-attachments/assets/15b898b2-afea-4ffd-9040-02909cc726d1" />
-){style width:"350" height:"300;"}
+![budget2](PowerBudgetRW2.jpg)
 
-![budget3](<img width="1055" height="815" alt="image" src="https://github.com/user-attachments/assets/47ee4967-97be-4f60-b311-988eb9943953" />
-){style width:"350" height:"300;"}
+![budget3](PowerBudgetRW3.jpg)
 
 ## Conclusions
 
