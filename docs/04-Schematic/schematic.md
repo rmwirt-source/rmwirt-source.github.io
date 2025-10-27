@@ -22,4 +22,5 @@ This subsystem means the user's needs by providiing a reliable audio feedback an
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](https://github.com/user-attachments/files/23047813/SchematicDesign_RW.pdf)
+The schematic as a PDF download is available [*here*](https://github.com/user-attachments/files/23172034/SchematicDesign_RW.pdf)
+
