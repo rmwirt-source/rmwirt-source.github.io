@@ -1,5 +1,5 @@
 ---
-title: Bill of Materials
+title: Bill of Materials WIP
 tags:
 - tag1
 - tag2
@@ -7,7 +7,7 @@ tags:
 
 ## Overview
 A table showing all of the products for my specific part of the Irri-Gators project. Making a component that, along with the others, takes signals and alerts the user to errors and/or possible errors happening with our project.
-## Bill of Materials
+## Bill of Materials WIP
 
 *Table ##: An example of one approach to adding your BOM table to this section.*
 
