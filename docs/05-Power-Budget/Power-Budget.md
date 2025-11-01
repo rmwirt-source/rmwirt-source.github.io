@@ -19,7 +19,7 @@ My subsystem uses only a +5 V rail and is powered by a 5 V, 2 A wall adapter. Th
 
 From preparing the Power Budget, I confirmed that my subsystem's power requirements are very well within safe operating limits. The wall adapter provides plenty of extra resources, even when the speaker and components operate at full output. No 12 V or 3.3 V rails are used, therefore it simplifies the design and reduces the chance for potential power conversion losses.
 <br><br>
-By completing this power budget I now have more of an understanding of how current, voltage, and power interact in my system. It gave me confidence that the subsystem will remain stable and efficient during thesting and intergration with the rest of my team's system.
+By completing this power budget I now have more of an understanding of how current, voltage, and power interact in my system. It gave me confidence that the subsystem will remain stable and efficient during testing and intergration with the rest of my team's system.
 
 
 ## Resouces
