@@ -9,11 +9,11 @@ My subsystem uses only a +5 V rail and is powered by a 5 V, 2 A wall adapter. Th
 
 
 
-![budget1](PowerBudgetRW1.jpg)
+![budget1](PowerBudgetV2P1.png)
 
-![budget2](PowerBudgetRW2.jpg)
+![budget2](PowerBudgetV2P2.png)
 
-![budget3](PowerBudgetRW3.jpg)
+![budget3](PowerBudgetV2P3.png)
 
 ## Conclusions
 
@@ -24,6 +24,6 @@ By completing this power budget I now have more of an understanding of how curre
 
 ## Resouces
 
-The power budget as a PDF download is available [*here*](https://github.com/user-attachments/files/23158719/PowerBudgetRW.pdf)
-, and a Microsoft Excel Sheet [*here*](https://github.com/user-attachments/files/23158720/PowerBudgetRW.xlsx)
+The power budget as a PDF download is available [*here*](https://github.com/user-attachments/files/23158719/PowerBudgetRW_V2.pdf)
+, and a Microsoft Excel Sheet [*here*](https://github.com/user-attachments/files/23158720/PowerBudgetRW_V2.xlsx)
 .
