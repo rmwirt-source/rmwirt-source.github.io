@@ -24,6 +24,6 @@ By completing this power budget I now have more of an understanding of how curre
 
 ## Resouces
 
-The power budget as a PDF download is available [*here*](https://github.com/user-attachments/files/23158719/PowerBudgetRW_V2.pdf)
-, and a Microsoft Excel Sheet [*here*](https://github.com/user-attachments/files/23158720/PowerBudgetRW_V2.xlsx)
+The power budget as a PDF download is available [*here*](https://github.com/rmwirt-source/rmwirt-source.github.io/blob/main/docs/05-Power-Budget/PowerBudgetRW_V2.pdf)
+, and a Microsoft Excel Sheet [*here*](https://github.com/rmwirt-source/rmwirt-source.github.io/blob/main/docs/05-Power-Budget/PowerBudgetRW_V2.xlsx)
 .
