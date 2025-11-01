@@ -15,7 +15,7 @@ This subsystem means the user's needs by providiing a reliable audio feedback an
 
 
 
-![1761591332839-e21bd0b6-e113-4a6a-bef0-81fbec15be35_1](https://github.com/user-attachments/assets/0bc870ec-c6b7-42eb-b2fd-03b7d51a9028)
+![Schematic](SchematicDesign_RW.pdf)
 
 
 
