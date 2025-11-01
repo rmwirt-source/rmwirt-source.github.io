@@ -23,7 +23,7 @@ A table showing all of the products for my specific part of the Irri-Gators proj
 
 ---
 
-### ✅ Summary
+### Summary
 This finalized BOM includes all components used in the alert and input subsystem:
 - Power regulation (LM7805)
 - Signal conditioning (MCP6004)
