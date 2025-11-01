@@ -8,7 +8,6 @@ This block diagram shows my design for a speaker system for Team 201: The Irri-g
 
 ## Block Diagram 
  
-<img width="751" height="691" alt="BlockDiagramRW drawio" src="https://github.com/user-attachments/assets/31164244-a152-40f8-85fa-678fc9963c5a" />
-
+![BlockDiagram](BlockDiagramRW.png)
 
 
