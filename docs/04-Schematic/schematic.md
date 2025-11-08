@@ -16,12 +16,12 @@ This subsystem meets the user and team requirements by providing reliable audio 
 <br><br>
 
 
-![Schematic](SchematicDesignRW.jpg)
+![Schematic](SpeakerSubsystemDesignRW.png)
 
 
 
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](https://github.com/rmwirt-source/rmwirt-source.github.io/blob/main/docs/04-Schematic/SchematicDesignRW.pdf)
+The schematic as a PDF download is available [*here*](https://github.com/rmwirt-source/rmwirt-source.github.io/blob/main/docs/04-Schematic/SpeakerSubsystemDesignRW.pdf)
 
