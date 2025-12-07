@@ -9,11 +9,11 @@ My subsystem uses only a +5 V rail and is powered by a 5 V, 2 A wall adapter. Th
 
 
 
-![budget1](PowerBudgetV2P1.png)
+![budget1](PowerBudgetRW_PG1.png)
 
-![budget2](PowerBudgetV2P2.png)
+![budget2](PowerBudgetRW_PG2.png)
 
-![budget3](PowerBudgetV2P3.png)
+![budget3](PowerBudgetRW_PG3.png)
 
 ## Conclusions
 
@@ -24,6 +24,7 @@ By completing this power budget I now have more of an understanding of how curre
 
 ## Resouces
 
-The power budget as a PDF download is available [*here*](https://github.com/rmwirt-source/rmwirt-source.github.io/blob/main/docs/05-Power-Budget/PowerBudgetRW_V2.pdf)
-, and a Microsoft Excel Sheet [*here*](https://github.com/rmwirt-source/rmwirt-source.github.io/blob/main/docs/05-Power-Budget/PowerBudgetRW_V2.xlsx)
+The power budget as a PDF download is available [*here*](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/05-Power-Budget/PowerBudgetRW_V4.pdf
+)
+, and a Microsoft Excel Sheet [*here*](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/05-Power-Budget/PowerBudgetRW_V4.xlsx)
 .
