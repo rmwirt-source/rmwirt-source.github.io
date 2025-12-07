@@ -23,5 +23,6 @@ This subsystem meets the user and team requirements by providing reliable audio 
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](https://github.com/rmwirt-source/rmwirt-source.github.io/blob/66c9e584225c2b9ae65d561f88cb84dc32b00d92/docs/04-Schematic/SchematicDesign_RW.pdf)
+The schematic as a PDF download is available [*here*](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/04-Schematic/SchematicDesign_RW.pdf).
+
 
