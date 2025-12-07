@@ -18,51 +18,24 @@ title: Component Selection
 **Rationale:**  
 Selected for its rail-to-rail operation and 5 V compatibility, enabling accurate low-level signal amplification without output clipping. It provides sufficient bandwidth for sensor signals while maintaining simplicity and low cost compared to higher-performance options.
 
----
-
-### 2. Push Buttons (User Input)
-
-| Solution | Pros | Cons | Cost | DigiKey | Picture |
-|----------|------|------|------:|-----------|-----------|
-| **Tactile Push Button (already in kit)** | - Already available<br>- Easy to wire<br>- Very inexpensive | - Small actuation area<br>- Limited mechanical lifespan (~100k cycles) | $0.10 | [Tactile Switch DigiKey](https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/TS02-66-60-BK-160-LCR-D/15634268?s=N4IgTCBcDaICoGUAMYC0A2dGmoEIGlUBGdHAGQGEAlVAERAF0BfIA) | <img src="https://github.com/user-attachments/assets/2508181f-b9f1-4dc4-8268-5cfe5b284e4c" alt="Tactile Switch" width="120" /> |
-| Omron B3F-4050 | - Long lifespan (~1 M cycles)<br>- Good tactile feedback<br>- Compact | - Slightly more expensive<br>- Requires more precise mounting | $0.50 | [Omron B3F-4050 DigiKey](https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3F-4050/95200?s=N4IgTCBcDaIPIFsBOB7AdgAgEIGYBiAtACwAMArCSALoC%2BQA) | <img src="https://github.com/user-attachments/assets/748d65d9-3ac8-4643-ad7d-6be7b74a3403" alt="Omron B3F-4050" width="120" /> |
-| C&K PTS645SM43SMTR92LFS | - Long lifespan<br>- Crisp tactile response<br>- Compact SMD package | - Not in kit<br>- SMD form factor makes soldering harder | $0.28 | [C&K PTS645SM43SMTR92LFS DigiKey](https://www.digikey.com/en/products/detail/c-k/PTS645SM43SMTR92-LFS/10071777) | <img src="https://github.com/user-attachments/assets/dd81ab68-0fbb-4b96-a69a-aaa120e653d3" alt="C&K PTS645" width="120" /> |
-
-**Choice:** Kit Push Button  
-**Rationale:**  
-Provides the necessary tactile input with minimal integration effort. Other options offered higher durability but unnecessary complexity for the project’s limited mechanical usage.
 
 ---
 
-### 3. Red LED (Visual Alert)
-
-| Solution | Pros | Cons | Cost | DigiKey | Picture |
-|----------|------|------|------:|-----------|-----------|
-| **Red LED (already in kit)** | - Already available<br>- Easy to interface<br>- Compact | - Low brightness in direct sunlight<br>- Requires series resistor | $0.05 | [Red LED DigiKey](https://www.digikey.com/en/products/detail/kingbright/WP710A10SRD14V/25610483) | <img src="https://github.com/user-attachments/assets/4712c179-c5b8-49c6-8c86-a8148871bd27" alt="Red LED" width="120" /> |
-| Kingbright WP7113ID | - High brightness (8000 mcd)<br>- Wide viewing angle (40°) | - Not in kit<br>- Slightly higher cost | $0.20 | [WP7113 DigiKey](https://www.digikey.com/en/products/detail/kingbright/WP7113ID/1747663) | <img src="https://github.com/user-attachments/assets/182ed7ff-567b-4f90-b8ff-128127207bb3" alt="Kingbright WP7113ID" width="120" /> |
-| Kingbright WP710A10SRD/J4 | - Extremely bright (10 000 mcd)<br>- Wide angle<br>- Low cost | - Not in kit<br>- Slightly higher forward voltage (2.1 V) | $0.12 | [Kingbright WP710A10SRD/J4 DigiKey](https://www.digikey.com/en/products/detail/kingbright/WP710A10SRD-J4/4098608?s=N4IgTCBcDaIOoAUDsBGADAQXQZQEoBEB6AKQBYQBdAXyA) | <img src="https://github.com/user-attachments/assets/1fd41189-617d-4d37-8f09-3cfeee184a2c" alt="Kingbright WP710A10SRD/J4" width="120" /> |
-
-**Choice:** Kit LED  
-**Rationale:**  
-Provides reliable visibility in indoor environments at minimal cost. Higher-intensity options were unnecessary for the application’s lighting conditions.
-
----
-
-### 4. Speaker/Buzzer (Audio Alert)
+### 2. Speaker/Buzzer (Audio Alert)
 
 | Solution | Pros | Cons | Cost | Datasheet/DigiKey | Picture |
 |----------|------|------|------:|--------------------|-----------|
-| 8 Ω Mylar Mini Speaker (already in kit) | - Already available<br>- Compact<br>- Works with small-signal amplifiers | - Limited sound pressure level (≈ 85 dB)<br>- Not high-fidelity | $0.85 | [CE-2808B36 Datasheet](https://www.jameco.com/z/CE-2808B36-James-Electronics-Micro-Round-8-Ohm-Mylar-Speaker-92-dB-2-Wires_2302983.html) | <img src="https://github.com/user-attachments/assets/24a6eb60-09d2-4d6f-b6c7-82f5fd910cd7" alt="8Ω Mylar Mini Speaker" width="120" /> |
-| **WT-1205 Buzzer** | - Small and easy to wire<br>- Louder than basic speakers (~90 dB)<br>- Reliable brand<br>- Simple two-pin connection | - Not in kit<br>- Slightly higher cost | $0.59 | [WT-1205 DigiKey](https://www.digikey.com/en/products/detail/soberton-inc/WT-1205/479674) | <img src="https://github.com/user-attachments/assets/ca3dbe7e-1671-4284-ba8d-99634466c295" alt="WT-1205 Buzzer" width="120" /> |
+| **8 Ω Mylar Mini Speaker (already in kit)** | - Already available<br>- Compact<br>- Works with small-signal amplifiers | - Limited sound pressure level (≈ 85 dB)<br>- Not high-fidelity | $0.85 | [CE-2808B36 Datasheet](https://www.jameco.com/z/CE-2808B36-James-Electronics-Micro-Round-8-Ohm-Mylar-Speaker-92-dB-2-Wires_2302983.html) | <img src="https://github.com/user-attachments/assets/24a6eb60-09d2-4d6f-b6c7-82f5fd910cd7" alt="8Ω Mylar Mini Speaker" width="120" /> |
+| WT-1205 Buzzer | - Small and easy to wire<br>- Louder than basic speakers (~90 dB)<br>- Reliable brand<br>- Simple two-pin connection | - Not in kit<br>- Slightly higher cost | $0.59 | [WT-1205 DigiKey](https://www.digikey.com/en/products/detail/soberton-inc/WT-1205/479674) | <img src="https://github.com/user-attachments/assets/ca3dbe7e-1671-4284-ba8d-99634466c295" alt="WT-1205 Buzzer" width="120" /> |
 | CUI Devices CDS-25148-L100 | - Robust design<br>- High sound output (≈ 95 dB)<br>- Durable housing | - Not in kit<br>- Larger footprint | $2.46 | [CUI Devices CDS-25148-L100 DigiKey](https://www.digikey.ca/en/products/detail/same-sky-formerly-cui-devices/CDS-25148-L100/5355540) | <img src="https://github.com/user-attachments/assets/5f8edc63-4071-42bb-97db-7a784e2491be" alt="CUI Devices CDS-25148-L100" width="120" /> |
 
-**Choice:** WT-1205 Buzzer  
+**Choice:** 8 Ω Mylar Mini Speaker
 **Rationale:**  
-Offers a stronger and clearer tone than the kit speaker while requiring simpler drive circuitry. Balances loudness, reliability, and ease of integration for short alert signals.
+Already in kit, works well with system, creates a loud enough noise for the purpose.
 
 ---
 
-### 5. Voltage Regulator (5 V Supply)
+### 3. Voltage Regulator (5 V Supply)
 
 | Solution | Pros | Cons | Cost | DigiKey | Picture |
 |----------|------|------|------:|-----------|-----------|
