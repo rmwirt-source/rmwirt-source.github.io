@@ -11,5 +11,6 @@ This block diagram shows my design for a speaker system for Team 201: The Irri-g
 ![BlockDiagram](BlockDiagramRW.png)
 <br><br>
 
-You can find a downloadable PDF of the block diagram [here](BlockDiagramRW.pdf).
+You can find a downloadable PDF of the block diagram [here](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/01-Block-Diagram/BlockDiagramRW.pdf).
+
 
