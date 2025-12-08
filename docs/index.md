@@ -13,19 +13,24 @@ for<br>
 
 ## Introduction
 
-This data sheet will give a detailed overview of my subsystem design for the Irri-gators Team 201 project. It will explain the function, power requirements, and the integration of my design with my fellow teammates. It will also help others understand how the circuit operates and where to locate specific details of componenets.
+This datasheet documents the Audio and Alert subsystem I designed for Team 201’s Garden Buddy project. The subsystem provides audible and visual feedback to indicate system status, alerts, and fault conditions. It uses a Microchip PIC18F57Q43 Curiosity Nano to process sensor inputs received through an 8-pin ribbon connector, and a complementary transistor push-pull driver (2N3904 + 2N3906) to drive an 8 Ω speaker using PWM. Power is supplied by a regulated +5 V rail. An LM7805 footprint is included on the PCB for compatibility with unregulated inputs but is bypassed when a regulated 5 V adapter is used.
+
+This datasheet contains the BOM, schematic, power budget, PCB images, and code used in the subsystem, along with design rationale and testing information. For the full system documentation, see the team website.
 
 ### Project Summary
 
-Team 201: The Irri-gators is developing an irrigation control system that is designed to be able to monitor your plants hydration level and then water the plants accordingly. To do this we are using sensors, actuators, and microcontroller-based logic. My portion of this project is designing the speaker subsystem which provides audio-based feedback to show the systems status, different alerts, and possible errors. The subsystem uses a Microchip PIC18F57Q43 Curiosity Nano Board to process input signals that are recieved through an 8-pin connector. From there the signals are amplified by an op amp and then output through a speaker. The power for this system is supplied by a 5 Volt 1.5 Amp voltage regulator to maintain consistent operation.
+Team 201: The Irri-Gators is developing an irrigation control system that monitors plant moisture conditions and activates watering when needed. The overall system integrates sensors, actuators, and microcontroller-based logic. My portion of the project focuses on the Audio and Alert subsystem, which generates sound-based notifications to indicate system activity, warnings, and possible errors.
 
-This datasheet is just one part of our larger report. For more details about the rest of the system please refer to the full team report at this link: https://asu-egr304-2025-f-201.github.io
+The subsystem uses a PIC18F57Q43 Curiosity Nano to interpret sensor signals sent over an 8-pin ribbon connector. The microcontroller then produces PWM output that is amplified by a complementary 2N3904 / 2N3906 transistor stage and sent to an 8 Ω speaker for audible alerts. The subsystem is powered from a regulated 5 V supply to maintain consistent and stable operation.
 
+This datasheet represents one part of our complete project documentation. To explore the full system, visit the team report at:
+https://asu-egr304-2025-f-201.github.io
 
 ### My Contribution
 
-My part of working with team 201 is designing, testing, and documenting our speaker subsystem. My design provides a reliable way to generate audio-based signals that alert the user to our designs activity or different errors that the system might be experiencing. During this I collaborated with my teammates to define signal interfaces and power distribution to maintain compatibility across our different subsystems.
+My contribution to Team 201 involves designing, testing, and documenting the speaker subsystem. This subsystem provides a dependable method for generating audio alerts that help users understand system behavior or detect errors. I worked with my teammates to define electrical interfaces, ensure power compatibility, and integrate the subsystem cleanly with the overall Garden Buddy architecture.
 
-This datasheet allows readers to navigate the various technical aspects of my contribution. To review the materials used in constructing this subsystem, refer to the "BOM" (Bill of Materials) section. For schematics, power analysis, or performance testing results, see the relevant sections within this document. Together, these provide a detailed analysis and understanding of how the speaker system supports Team 201's project Garden Buddy.
+This datasheet guides readers through the technical aspects of my subsystem. The “BOM” section lists the major components used in the design. The schematic, power budget, PCB layout, and testing sections provide further detail on the electrical performance and design decisions. Together, these sections explain how the speaker subsystem supports Team 201’s Garden Buddy project.
 
-To review the details listed of the material used to construct the subsection, you can review it in the ["BOM"](https://rmwirt-source.github.io/03-BOM/BOM) section of the datasheet.
+To review the materials used in this design, see the [BOM](https://rmwirt-source.github.io/03-BOM/BOM) section of the datasheet.
+
