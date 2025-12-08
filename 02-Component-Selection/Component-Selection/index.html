@@ -614,38 +614,41 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Component Selection">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-speaker-signal-conditioning-transistor-options" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-speaker-signal-conditioning-transistor-driver-options" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Speaker Signal Conditioning (Transistor Options)
+      1. Speaker Signal Conditioning (Transistor Driver Options)
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#2-speakerbuzzer-audio-alert" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#2-speakerbuzzer-audio-output-device" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Speaker/Buzzer (Audio Alert)
+      2. Speaker/Buzzer (Audio Output Device)
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#3-voltage-regulator-5-v-supply" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#3-voltage-regulation-5-v-supply" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Voltage Regulator (5 V Supply)
+      3. Voltage Regulation (5 V Supply)
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-major-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of Major Components
+    </span>
+  </a>
   
 </li>
       
@@ -1018,38 +1021,41 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Component Selection">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-speaker-signal-conditioning-transistor-options" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-speaker-signal-conditioning-transistor-driver-options" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Speaker Signal Conditioning (Transistor Options)
+      1. Speaker Signal Conditioning (Transistor Driver Options)
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#2-speakerbuzzer-audio-alert" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#2-speakerbuzzer-audio-output-device" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Speaker/Buzzer (Audio Alert)
+      2. Speaker/Buzzer (Audio Output Device)
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#3-voltage-regulator-5-v-supply" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#3-voltage-regulation-5-v-supply" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Voltage Regulator (5 V Supply)
+      3. Voltage Regulation (5 V Supply)
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-major-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of Major Components
+    </span>
+  </a>
   
 </li>
       
@@ -1079,8 +1085,10 @@
   <h1>Component Selection</h1>
 
 <h2 id="component-selection">Component Selection</h2>
+<p>This section outlines the major components chosen for the Audio and Alert subsystem and summarizes the design decisions behind each choice. The final major components are listed in the summary table below, followed by detailed evaluations of alternatives considered during development.
+<br></p>
 <hr>
-<h3 id="1-speaker-signal-conditioning-transistor-options">1. Speaker Signal Conditioning (Transistor Options)</h3>
+<h2 id="1-speaker-signal-conditioning-transistor-driver-options">1. Speaker Signal Conditioning (Transistor Driver Options)</h2>
 <table>
 <thead>
 <tr>
@@ -1095,35 +1103,35 @@
 <tbody>
 <tr>
 <td><strong>2N3904 (NPN) + 2N3906 (PNP) (already in kit)</strong></td>
-<td>- Complementary BJT pair for push-pull output<br>- Very low cost<br>- Works well with PIC PWM<br>- Simple design</td>
-<td>- Limited current (≈200–300 mA)<br>- Not suitable for loud/high-power audio</td>
+<td>Complementary BJT pair forms a simple push-pull stage. Very low cost and works well with PIC PWM output. Easy to integrate and compact.</td>
+<td>Limited current capability (around 200–300 mA). Not suitable for high-volume audio.</td>
 <td style="text-align: right;">~$0.10 combined</td>
 <td><a href="https://www.digikey.com/en/products/detail/lumimax-optoelectronic-technology/2N3904/22116349">2N3904</a><br><a href="https://www.digikey.com/en/products/detail/lumimax-optoelectronic-technology/2N3906/22116343">2N3906</a></td>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/fa75cb63-4de4-4150-b3bc-0b110ac82301" data-desc-position="bottom"><img alt="2N3906" src="https://github.com/user-attachments/assets/fa75cb63-4de4-4150-b3bc-0b110ac82301"></a></td>
 </tr>
 <tr>
 <td>Single NPN Driver (2N2222 or 2N3904)</td>
-<td>- Simplest design<br>- Easy low-side switching<br>- Good for short beeps</td>
-<td>- Lower volume<br>- Not push-pull<br>- Only pulls to ground</td>
+<td>Very simple circuit suitable for low-side switching. Works well for short, simple tone bursts.</td>
+<td>Lower output volume. Not a true push-pull stage. Limited to pulling current in one direction.</td>
 <td style="text-align: right;">~$0.05</td>
 <td><a href="https://www.digikey.com/en/products/detail/onsemi/2N2222/33077">2N2222</a></td>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/69ea7552-7565-4d7f-a179-7653fd5d176a" data-desc-position="bottom"><img alt="2N2222" src="https://github.com/user-attachments/assets/69ea7552-7565-4d7f-a179-7653fd5d176a"></a></td>
 </tr>
 <tr>
-<td>Logic-Level MOSFET (N-Channel, Si2302)</td>
-<td>- Higher current capability<br>- Low heat / low Rds(on)<br>- Efficient for PWM tones</td>
-<td>- Not in kit<br>- More sensitive to wiring/layout</td>
+<td>Logic-Level MOSFET (Si2302)</td>
+<td>Higher current capability, low conduction losses, and efficient for PWM audio.</td>
+<td>Not included in kit and more sensitive to wiring and grounding.</td>
 <td style="text-align: right;">~$0.30</td>
 <td><a href="https://www.digikey.com/en/products/detail/mcc-micro-commercial-components/SI2302-TP/1793243">Si2302</a></td>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/244a0dfa-d4ad-462e-ae66-8da078ac7b3c" data-desc-position="bottom"><img alt="Si2302" src="https://github.com/user-attachments/assets/244a0dfa-d4ad-462e-ae66-8da078ac7b3c"></a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> 2N3904 + 2N3906<br>
+<p><strong>Final Choice: 2N3904 + 2N3906</strong><br>
 <strong>Rationale:</strong><br>
-Provides a simple, low-cost push-pull transistor driver compatible with the PIC’s PWM output. It supplies enough current for the 8 Ω speaker while keeping the circuit compact and easy to implement.</p>
+This complementary pair forms an efficient, low-cost push-pull driver compatible with the PIC’s PWM signal. Both transistors are provided in the kit, easy to solder, and offer enough current handling for short audio bursts. The resulting circuit is compact, reliable, and requires minimal external components.</p>
 <hr>
-<h3 id="2-speakerbuzzer-audio-alert">2. Speaker/Buzzer (Audio Alert)</h3>
+<h2 id="2-speakerbuzzer-audio-output-device">2. Speaker/Buzzer (Audio Output Device)</h2>
 <table>
 <thead>
 <tr>
@@ -1138,35 +1146,35 @@ Provides a simple, low-cost push-pull transistor driver compatible with the PIC�
 <tbody>
 <tr>
 <td><strong>8 Ω Mylar Mini Speaker (already in kit)</strong></td>
-<td>- Already available<br>- Compact<br>- Works with small-signal amplifiers</td>
-<td>- Limited sound pressure level (≈ 85 dB)<br>- Not high-fidelity</td>
+<td>Small, lightweight, and produces clear tones. Convenient and already available.</td>
+<td>Moderate loudness (~85 dB). Not suited for high-power audio.</td>
 <td style="text-align: right;">$0.85</td>
 <td><a href="https://www.jameco.com/z/CE-2808B36-James-Electronics-Micro-Round-8-Ohm-Mylar-Speaker-92-dB-2-Wires_2302983.html">CE-2808B36 Datasheet</a></td>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/24a6eb60-09d2-4d6f-b6c7-82f5fd910cd7" data-desc-position="bottom"><img src="https://github.com/user-attachments/assets/24a6eb60-09d2-4d6f-b6c7-82f5fd910cd7" alt="8Ω Mylar Mini Speaker" width="120"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/24a6eb60-09d2-4d6f-b6c7-82f5fd910cd7" data-desc-position="bottom"><img src="https://github.com/user-attachments/assets/24a6eb60-09d2-4d6f-b6c7-82f5fd910cd7" width="120"></a></td>
 </tr>
 <tr>
 <td>WT-1205 Buzzer</td>
-<td>- Small and easy to wire<br>- Louder than basic speakers (~90 dB)<br>- Reliable brand<br>- Simple two-pin connection</td>
-<td>- Not in kit<br>- Slightly higher cost</td>
+<td>Louder (~90 dB) and has a simple two-pin interface. Great for fixed alerts.</td>
+<td>Not included in kit. Only supports fixed-frequency tones.</td>
 <td style="text-align: right;">$0.59</td>
 <td><a href="https://www.digikey.com/en/products/detail/soberton-inc/WT-1205/479674">WT-1205 DigiKey</a></td>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/ca3dbe7e-1671-4284-ba8d-99634466c295" data-desc-position="bottom"><img src="https://github.com/user-attachments/assets/ca3dbe7e-1671-4284-ba8d-99634466c295" alt="WT-1205 Buzzer" width="120"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/ca3dbe7e-1671-4284-ba8d-99634466c295" data-desc-position="bottom"><img src="https://github.com/user-attachments/assets/ca3dbe7e-1671-4284-ba8d-99634466c295" width="120"></a></td>
 </tr>
 <tr>
-<td>CUI Devices CDS-25148-L100</td>
-<td>- Robust design<br>- High sound output (≈ 95 dB)<br>- Durable housing</td>
-<td>- Not in kit<br>- Larger footprint</td>
+<td>CUI CDS-25148-L100</td>
+<td>Robust construction and loud (~95 dB). Suitable for noisy environments.</td>
+<td>Not included in kit. Larger physical size.</td>
 <td style="text-align: right;">$2.46</td>
-<td><a href="https://www.digikey.ca/en/products/detail/same-sky-formerly-cui-devices/CDS-25148-L100/5355540">CUI Devices CDS-25148-L100 DigiKey</a></td>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/5f8edc63-4071-42bb-97db-7a784e2491be" data-desc-position="bottom"><img src="https://github.com/user-attachments/assets/5f8edc63-4071-42bb-97db-7a784e2491be" alt="CUI Devices CDS-25148-L100" width="120"></a></td>
+<td><a href="https://www.digikey.ca/en/products/detail/same-sky-formerly-cui-devices/CDS-25148-L100/5355540">CDS-25148-L100 DigiKey</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/5f8edc63-4071-42bb-97db-7a784e2491be" data-desc-position="bottom"><img src="https://github.com/user-attachments/assets/5f8edc63-4071-42bb-97db-7a784e2491be" width="120"></a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> 8 Ω Mylar Mini Speaker
+<p><strong>Final Choice: 8 Ω Mylar Mini Speaker</strong><br>
 <strong>Rationale:</strong><br>
-Already in kit, works well with system, creates a loud enough noise for the purpose.</p>
+This speaker is already available in the kit, easy to mount, and produces clear enough tones for alerting purposes. It integrates well with the transistor driver and does not require additional amplification or specialized circuitry. Its size and power rating are appropriate for a lightweight subsystem.</p>
 <hr>
-<h3 id="3-voltage-regulator-5-v-supply">3. Voltage Regulator (5 V Supply)</h3>
+<h2 id="3-voltage-regulation-5-v-supply">3. Voltage Regulation (5 V Supply)</h2>
 <table>
 <thead>
 <tr>
@@ -1181,34 +1189,98 @@ Already in kit, works well with system, creates a loud enough noise for the purp
 <tbody>
 <tr>
 <td><strong>LM7805 Linear Regulator (already in kit)</strong></td>
-<td>- Already available<br>- Simple to use<br>- Stable 5 V output<br>- Low noise</td>
-<td>- Inefficient for large voltage drops<br>- Heat generation above 1 A load</td>
+<td>Stable 5 V output, low noise, and extremely simple to integrate. Requires very few external components.</td>
+<td>Low efficiency when stepping down from higher voltages. Can produce heat at higher loads.</td>
 <td style="text-align: right;">$0.43</td>
 <td><a href="https://www.digikey.com/en/products/detail/texas-instruments/LM7805CT-NOPB/3901929">LM7805 DigiKey</a></td>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/eddfdf8e-9196-4929-8f94-2821147ae6c7" data-desc-position="bottom"><img src="https://github.com/user-attachments/assets/eddfdf8e-9196-4929-8f94-2821147ae6c7" alt="LM7805 Linear Regulator" width="120"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/eddfdf8e-9196-4929-8f94-2821147ae6c7" data-desc-position="bottom"><img src="https://github.com/user-attachments/assets/eddfdf8e-9196-4929-8f94-2821147ae6c7" width="120"></a></td>
 </tr>
 <tr>
-<td>LM2940 Low Dropout 5 V Regulator</td>
-<td>- Low dropout voltage (0.5 V)<br>- Better efficiency than 7805<br>- Stable with automotive inputs</td>
-<td>- Not in kit<br>- Requires larger output capacitor for stability</td>
+<td>LM2940 Low Dropout Regulator</td>
+<td>Lower dropout voltage and more efficient over moderate loads. Designed for unstable power environments.</td>
+<td>Not included in kit and requires specific output capacitors for stability.</td>
 <td style="text-align: right;">$1.00</td>
 <td><a href="https://www.digikey.com/en/products/detail/texas-instruments/LM2940CT-5-0-NOPB/32575">LM2940 DigiKey</a></td>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/189cf4cb-28ce-4b4e-9072-73f90d5db23d" data-desc-position="bottom"><img src="https://github.com/user-attachments/assets/189cf4cb-28ce-4b4e-9072-73f90d5db23d" alt="LM2940 LDO Regulator" width="120"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/189cf4cb-28ce-4b4e-9072-73f90d5db23d" data-desc-position="bottom"><img src="https://github.com/user-attachments/assets/189cf4cb-28ce-4b4e-9072-73f90d5db23d" width="120"></a></td>
 </tr>
 <tr>
 <td>LM2596S-5.0 Switching Regulator</td>
-<td>- High efficiency (~85–90%)<br>- Supplies up to 3 A<br>- Minimal heat dissipation</td>
-<td>- Requires inductor and diode<br>- More complex PCB layout</td>
+<td>High efficiency and capable of supplying higher currents with very little heat.</td>
+<td>More complex layout and requires additional passive components.</td>
 <td style="text-align: right;">$3.50</td>
-<td><a href="https://www.digikey.com/en/products/detail/umw/LM2596S-5-0/16705901">LM2596S-5.0 Switching Regulator DigiKey</a></td>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/e440cd1d-b4ff-4d56-aba8-00aee270d8fc" data-desc-position="bottom"><img src="https://github.com/user-attachments/assets/e440cd1d-b4ff-4d56-aba8-00aee270d8fc" alt="LM2596S Switching Regulator" width="120"></a></td>
+<td><a href="https://www.digikey.com/en/products/detail/umw/LM2596S-5-0/16705901">LM2596S-5.0</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/e440cd1d-b4ff-4d56-aba8-00aee270d8fc" data-desc-position="bottom"><img src="https://github.com/user-attachments/assets/e440cd1d-b4ff-4d56-aba8-00aee270d8fc" width="120"></a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> LM7805<br>
+<p><strong>Final Choice: LM7805</strong><br>
 <strong>Rationale:</strong><br>
-Provides a simple and proven 5 V source for the PIC and sensors with minimal external components. While less efficient than switching regulators, its low noise and stability make it well-suited for mixed analog/digital systems.</p>
+The LM7805 is stable, low-noise, and straightforward to use, which makes it ideal for powering both the PIC microcontroller and the audio circuitry. Because the subsystem draws relatively little current, heat is not a concern, and the regulator provides a clean 5 V rail with minimal external components. Its availability in the kit further simplifies the design.</p>
 <hr>
+<h2 id="summary-of-major-components">Summary of Major Components</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Part Number</th>
+<th>Function</th>
+<th>Rationale for Selection</th>
+<th style="text-align: right;">Cost</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PIC18F57Q43 Curiosity Nano</strong></td>
+<td>EV18F57Q43</td>
+<td>Microcontroller for PWM generation and subsystem control</td>
+<td>Already provided in the kit, strong peripheral set, consistent with team’s chosen MCU</td>
+<td style="text-align: right;">Included in kit</td>
+<td><a href="https://www.microchip.com/en-us/development-tool/EV18F57Q43">Product Page</a></td>
+</tr>
+<tr>
+<td><strong>2N3904 NPN Transistor</strong></td>
+<td>2N3904</td>
+<td>Push-pull driver (high-side switching)</td>
+<td>Readily available, reliable, and supports the required current for alert tones</td>
+<td style="text-align: right;">~$0.05</td>
+<td><a href="https://www.digikey.com/en/products/detail/lumimax-optoelectronic-technology/2N3904/22116349">DigiKey</a></td>
+</tr>
+<tr>
+<td><strong>2N3906 PNP Transistor</strong></td>
+<td>2N3906</td>
+<td>Push-pull driver (low-side switching)</td>
+<td>Complements 2N3904 to create a simple and effective audio drive stage</td>
+<td style="text-align: right;">~$0.05</td>
+<td><a href="https://www.digikey.com/en/products/detail/lumimax-optoelectronic-technology/2N3906/22116343">DigiKey</a></td>
+</tr>
+<tr>
+<td><strong>8 Ω Mini Mylar Speaker</strong></td>
+<td>CE-2808B36</td>
+<td>Produces audible alert tones</td>
+<td>Already available, compact, and sufficiently loud for subsystem needs</td>
+<td style="text-align: right;">~$0.85</td>
+<td><a href="https://www.jameco.com/z/CE-2808B36-James-Electronics-Micro-Round-8-Ohm-Mylar-Speaker-92-dB-2-Wires_2302983.html">Datasheet</a></td>
+</tr>
+<tr>
+<td><strong>LM7805 Linear Regulator</strong></td>
+<td>LM7805CT</td>
+<td>Provides regulated 5 V supply</td>
+<td>Stable, low-noise, easy to use, and included in the kit</td>
+<td style="text-align: right;">~$0.43</td>
+<td><a href="https://www.digikey.com/en/products/detail/texas-instruments/LM7805CT-NOPB/3901929">DigiKey</a></td>
+</tr>
+<tr>
+<td><strong>5 V / 2 A Wall Adapter</strong></td>
+<td>Generic</td>
+<td>Primary subsystem power source</td>
+<td>Reliable and provides significant current overhead</td>
+<td style="text-align: right;">~$6.00</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
 
 
 
