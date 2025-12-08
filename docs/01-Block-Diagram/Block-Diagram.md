@@ -13,3 +13,6 @@ The subsystem also includes a local LED indicator and a pushbutton for testing a
 <br><br>
 
 A downloadable PDF of the block diagram is available [here](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/01-Block-Diagram/BlockDiagramRW.pdf).
+<br>
+
+A downloadable .zip of the block diagram is available [here](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/01-Block-Diagram/SpeakerBlockDiagramRW.zip).
