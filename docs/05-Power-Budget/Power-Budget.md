@@ -3,14 +3,13 @@ title: Power Budget
 ---
 
 ## Overview
-This power budget identifies the amount of power that my subsystem requires and confirms that the selected power source safely meets the needs of the Audio and Alert subsystem. Each component in the design was reviewed to determine its maximum current draw, including the PIC18F57Q43 microcontroller, the 2N3904 and 2N3906 transistors used in the speaker driver, the indicator LED, and the support circuitry.
+This power budget identifies the amount of power that my subsystem requires and confirms that the selected power source safely meets the needs of the Audio and Alert subsystem. Each component in the design was reviewed to determine its maximum current draw including the PIC18F57Q43 microcontroller, the 2N3904 and 2N3906 transistors used in the speaker driver, the indicator LED, and the support circuitry.
+
+My subsystem operates entirely from a regulated 5 V rail and is powered by a 5 V, 2 A wall adapter. The tables shown below outline the current requirements for each part of the design. A 25 percent safety margin is applied to account for worst case operating conditions. Based on these calculations the total subsystem current remains well below the limits of the power supply.
+
+The transistor based speaker driver replaces the previous op amp design and draws significantly less current in steady state. The speaker itself draws short bursts of higher current when generating alert tones, but these pulses remain within the safe limits of the supply and the wiring allowances included in the budget.
+
 <br>
-
-My subsystem operates entirely from a regulated +5 V rail and is powered by a 5 V, 2 A wall adapter. The tables shown below outline the current requirements for each part of the design. A 25 percent safety margin is applied to account for worst-case operating conditions. Based on these calculations, the total subsystem current remains well below the limits of the power supply.
-<br>
-
-The transistor-based speaker driver replaces the previous op-amp design and draws significantly less current in steady state. The speaker itself draws short bursts of higher current when generating alert tones, but these pulses remain within the safe limits of the supply and the wiring allowances included in the budget.
-
 
 ![budget1](PowerBudgetRW_V5_PG1.png)
 
@@ -18,32 +17,32 @@ The transistor-based speaker driver replaces the previous op-amp design and draw
 
 ![budget3](PowerBudgetRW_V5_PG3.png)
 
+---
+
 ## Power Budget Explanation
 
-The purpose of the power budget is to verify that all components in the Speaker Subsystem can operate safely from the selected power source without exceeding the regulator’s current capability or causing thermal issues. To create the final power budget, I collected the maximum current values for each component from their datasheets and used worst-case estimates to ensure that the design remains reliable even under full load.
-<br>
+The purpose of the power budget is to verify that all components in the Speaker Subsystem can operate safely from the selected 5 V power source. To complete this budget I gathered maximum current values from datasheets and used worst case estimates to ensure that the subsystem remains reliable under full load. Each component in the design was evaluated including the PIC18F57Q43 microcontroller, the complementary transistor driver, the speaker, the indicator LED, and the support circuitry.
 
-The PIC18F57Q43 microcontroller has a relatively small current draw, and its maximum active current was used to provide margin during operation. The audio amplifier and speaker load represent the largest portion of the subsystem’s power consumption, so their values were calculated based on the maximum output power and expected efficiency. I also included losses through the linear regulator, since linear regulators dissipate excess voltage as heat, which affects total system power requirements.
-<br>
+The PIC18F57Q43 has a small and predictable current draw during active operation which makes it straightforward to model. The LED and pushbutton contribute very little current and their values were taken from typical operating conditions. The speaker produces short bursts of higher current when generating tones so its value represents the largest contribution to the budget. The transistor driver that replaced the original op amp design draws significantly less current in steady state since it does not require continuous bias current to operate.
 
-Once all currents were summed, I compared the total subsystem current to the 9V supply and to the maximum output capability of the linear regulator. From this comparison, I confirmed that the regulator provides sufficient headroom for safe operation, even at peak load. This analysis shows that the subsystem will not exceed the regulator's thermal or electrical limits, and no additional power components are required.
-<br>
-The conclusion from this power budget is that the Speaker Subsystem comfortably meets power requirements with adequate safety margin, and the chosen power architecture is appropriate for the final design.
+Once these values were summed and the required safety margin was added the total current remained well below the 2 A limit of the regulated 5 V wall adapter used to power the subsystem. Because the subsystem receives power from a regulated 5 V supply during normal operation the LM7805 footprint on the PCB is not used and does not affect the power budget. This simplifies the analysis since no voltage conversion losses need to be included.
+
+The completed power budget shows that the Speaker Subsystem has ample electrical headroom and can operate safely without overloading the supply. The available margin ensures stable behavior during testing and during full system integration even when the speaker produces repeated alert tones.
+
+---
 
 ## Conclusions
 
-From the updated power budget, the subsystem’s current requirements remain far below the limits of the 5 V, 2 A wall adapter. The replacement of the op-amp with a 2N3904 and 2N3906 transistor driver does not significantly impact the overall power consumption, and the speaker load only draws short bursts of current during audible alerts. The total operating current, including a 25 percent safety margin, is approximately 200 mA, leaving substantial overhead for reliable operation.
-<br>
+The updated power budget confirms that the Speaker Subsystem requires far less current than the 5 V, 2 A power supply can deliver. The PIC18F57Q43 and indicator components draw only small amounts of current during normal operation and the speaker produces higher current only in short pulses when alerts are active. Even with a 25 percent safety margin applied the total current is roughly 200 mA which leaves significant overhead for reliable performance.
 
-Because the subsystem uses only a 5 V power rail and does not include any higher-voltage regulation stages, the design remains simple, efficient, and low risk for power faults. The calculated current draws confirm that all components receive sufficient power without overloading the supply, and the regulator and wiring allowances provide additional margin for real-world conditions.
-<br>
+Since the subsystem operates entirely from a regulated 5 V source and no higher voltage conversion is required the design remains efficient and simple. All components receive stable power without approaching the limits of the supply and the margins included in the design provide confidence that the subsystem will remain dependable under real world conditions.
 
-This analysis increases confidence that the subsystem will remain stable during testing and full system integration, even under worst-case load conditions.
-<br>
+This analysis verifies that the subsystem meets its power requirements and that no changes are needed in the final design.
 
-## Resouces
+---
 
-The power budget as a PDF download is available [*here*](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/05-Power-Budget/PowerBudgetRW_V5.pdf
-)
-, and a Microsoft Excel Sheet [*here*](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/05-Power-Budget/PowerBudgetRW_V5.xlsx)
-.
+## Resources
+
+The power budget is available as a PDF download [here](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/05-Power-Budget/PowerBudgetRW_V5.pdf).  
+The Microsoft Excel version is available [here](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/05-Power-Budget/PowerBudgetRW_V5.xlsx).
+
