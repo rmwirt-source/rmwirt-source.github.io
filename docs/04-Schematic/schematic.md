@@ -30,5 +30,6 @@ Overall, the schematic supports the required audio and alert functions while rem
 ## Resouces
 
 The schematic as a PDF download is available [*here*](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/04-Schematic/SchematicDesign_RW.pdf).
+<br>
 The schematic as a .zip download is available [*here*](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/04-Schematic/SchematicDesign_RW.zip).
 
