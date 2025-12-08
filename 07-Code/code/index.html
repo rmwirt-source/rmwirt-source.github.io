@@ -866,6 +866,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pinout-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pinout Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcc-pin-configuration-screenshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCC Pin Configuration Screenshot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-source-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Full Source Code
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1053,6 +1080,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pinout-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pinout Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcc-pin-configuration-screenshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCC Pin Configuration Screenshot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-source-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Full Source Code
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1079,11 +1133,74 @@
   <h1>Code</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This is my MP Lab Code for the speaker subsystem project. It is set up so when it starts up it beeps and the green LED turns on so you know the system has power. Then the red LED will light up and blink when the project is armed and ready for sensing. 
-<br> <br>
-When the light sensor sends a 5V signal the speaker beeps 3 times. On the other hand when the moisture sensor stops sending a signal it beeps 2 times. This is supposed to indicate when the plant doesn't have enough light or if the moisture sensor loses connection to the system for any reason.</p>
-<p><br><br></p>
-<div class="highlight"><pre><span></span><code>/* Sensors: RA2 (light, active HIGH), RB0 (moisture, active LOW)
+<p>This page contains the full firmware, pinout table, MCC configuration screenshot, and the downloadable MPLAB X project for the Audio and Alert Subsystem. The subsystem uses the PIC18F57Q43 Curiosity Nano to generate PWM tones and process sensor signals for light and moisture detection.</p>
+<p>On startup the system emits a confirmation beep and flashes the LED to show that the device is powered. The firmware monitors two sensor inputs. The light sensor on RA2 is active high and triggers a three beep alert when a rising edge is confirmed. The moisture sensor on RB0 is active low and triggers a two beep alert when a falling edge is confirmed. After any alert the firmware waits for both sensors to return to idle before rearming.</p>
+<p>This page also documents which microcontroller pins are used by the subsystem so the code and hardware can be reproduced.</p>
+<hr>
+<h2 id="pinout-table">Pinout Table</h2>
+<p>The following table lists the PIC18F57Q43 pins used in this subsystem along with their direction and purpose.</p>
+<table>
+<thead>
+<tr>
+<th>PIC Pin</th>
+<th>Port/Bit</th>
+<th>Direction</th>
+<th>Function</th>
+<th>Subsystem Role</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA2</td>
+<td>PORTAbits.RA2</td>
+<td>Input</td>
+<td>Light sensor input</td>
+<td>Detects high level light events</td>
+<td>Configured as digital input in TRIS and ANSEL</td>
+</tr>
+<tr>
+<td>RB0</td>
+<td>PORTBbits.RB0</td>
+<td>Input</td>
+<td>Moisture sensor input</td>
+<td>Detects low level moisture events</td>
+<td>Internal weak pull up enabled</td>
+</tr>
+<tr>
+<td>RC7</td>
+<td>LATCbits.LATC7</td>
+<td>Output</td>
+<td>PWM audio output</td>
+<td>Drives PWM tone to the speaker driver</td>
+<td>Uses PWM1 16BIT module</td>
+</tr>
+<tr>
+<td>RC4</td>
+<td>LATCbits.LATC4</td>
+<td>Output</td>
+<td>LED indicator</td>
+<td>Provides heartbeat and ready feedback</td>
+<td>Active low LED</td>
+</tr>
+<tr>
+<td>VDD/GND</td>
+<td>Power pins</td>
+<td>Power</td>
+<td>Supply rails</td>
+<td>Provide regulated 5 V power and ground</td>
+<td>Powered from 5 V adapter</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="mcc-pin-configuration-screenshot">MCC Pin Configuration Screenshot</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../Pinout-Table.png" data-desc-position="bottom"><img alt="Pinout-Table" src="../Pinout-Table.png"></a></p>
+<p>The screenshot above shows the final MCC pin configuration used for the subsystem. It includes all input and output assignments that appear in the firmware.</p>
+<hr>
+<h2 id="full-source-code">Full Source Code</h2>
+<p>The complete firmware is shown below. This is the same version included in the downloadable MPLAB X project zip file.
+</p><div class="highlight"><pre><span></span><code>/* Sensors: RA2 (light, active HIGH), RB0 (moisture, active LOW)
    - Light: beep on confirmed rising edge (0-&gt;1)
   - Moisture: beep on confirmed falling edge (1-&gt;0) -- only when it goes to 0V
    - Uses PWM1_16BIT on RC7 for tone, LED on RC4 (active-low)
@@ -1317,7 +1434,7 @@ int main(void) {
 
     return 0;
 }
-</code></pre></div>
+</code></pre></div><p></p>
 <p><br></p>
 <p>The Project as a .zip file is available <a href="https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/07-Code/SpeakerSubsystem_V1.zip"><em>here</em></a>.</p>
 
