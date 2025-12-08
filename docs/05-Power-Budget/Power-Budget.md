@@ -18,7 +18,17 @@ The transistor-based speaker driver replaces the previous op-amp design and draw
 
 ![budget3](PowerBudgetRW_V5_PG3.png)
 
-## Conclusions
+## Power Budget Explanation
+
+The purpose of the power budget is to verify that all components in the Speaker Subsystem can operate safely from the selected power source without exceeding the regulator’s current capability or causing thermal issues. To create the final power budget, I collected the maximum current values for each component from their datasheets and used worst-case estimates to ensure that the design remains reliable even under full load.
+<br>
+
+The PIC18F57Q43 microcontroller has a relatively small current draw, and its maximum active current was used to provide margin during operation. The audio amplifier and speaker load represent the largest portion of the subsystem’s power consumption, so their values were calculated based on the maximum output power and expected efficiency. I also included losses through the linear regulator, since linear regulators dissipate excess voltage as heat, which affects total system power requirements.
+<br>
+
+Once all currents were summed, I compared the total subsystem current to the 9V supply and to the maximum output capability of the linear regulator. From this comparison, I confirmed that the regulator provides sufficient headroom for safe operation, even at peak load. This analysis shows that the subsystem will not exceed the regulator's thermal or electrical limits, and no additional power components are required.
+<br>
+The conclusion from this power budget is that the Speaker Subsystem comfortably meets power requirements with adequate safety margin, and the chosen power architecture is appropriate for the final design.
 
 ## Conclusions
 
