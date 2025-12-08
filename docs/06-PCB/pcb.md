@@ -19,4 +19,4 @@ The layout prioritizes short signal paths between the PWM output and the transis
 
 The PCB as a PDF download is available [*here*](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/06-PCB/SchematicDesign_RW.pdf).
 <br><br>
-The Project as a .zip file is available [*here*](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/06-PCB/SchematicDesign_RW.zip).
+The Project as a .zip file with the ECAD files and Gerber files is available [*here*](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/06-PCB/SchematicDesign_RW.zip).
