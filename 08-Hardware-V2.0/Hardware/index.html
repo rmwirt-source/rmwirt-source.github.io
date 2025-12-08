@@ -24,7 +24,7 @@
 
     
       
-        <title>Hardware - EGR 304 Data Sheet</title>
+        <title>Hardware V2.0 - EGR 304 Data Sheet</title>
       
     
     
@@ -87,6 +87,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -118,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hardware
+              Hardware V2.0
             
           </span>
         </div>
@@ -822,15 +827,106 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Hardware V2.0
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Hardware
+    Hardware V2.0
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improved-power-regulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improved Power Regulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enhanced-audio-driver-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhanced Audio Driver Performance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcb-layout-refinements" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCB Layout Refinements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improved-connector-and-wiring-durability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improved Connector and Wiring Durability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opportunities-for-modularization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opportunities for Modularization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -862,6 +958,77 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improved-power-regulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improved Power Regulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enhanced-audio-driver-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhanced Audio Driver Performance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcb-layout-refinements" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCB Layout Refinements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improved-connector-and-wiring-durability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improved Connector and Wiring Durability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opportunities-for-modularization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opportunities for Modularization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -883,7 +1050,58 @@
   
 
 
-  <h1>Hardware</h1>
+  <h1>Hardware V2.0</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This section discusses potential improvements for a future Version 2.0 of the Audio and Alert subsystem. While the current design meets all functional requirements and operates reliably during testing, several hardware enhancements could further improve efficiency, audio performance, manufacturability, and long-term reliability. These recommendations are based on observations during development, PCB assembly, debugging, and integration with the full system.
+<br></p>
+<p>The goal of Version 2.0 would not be to replace the existing design, but to refine it based on the lessons learned from this hardware revision. The following subsections outline proposed improvements and the motivation behind each one.</p>
+<h2 id="improved-power-regulation">Improved Power Regulation</h2>
+<p>The subsystem currently relies on an external regulated 5 V supply and does not include onboard voltage conversion. This keeps the design simple but limits flexibility for future updates.<br>
+<br></p>
+<p>For Hardware V2.0, using a small buck switching regulator would improve efficiency, reduce heat, and maintain a stable output voltage even when the speaker draws short high-current pulses. If the system ever uses a higher-voltage battery or alternate power source, a switching regulator would make the subsystem more robust and independent from external regulation.</p>
+<h2 id="enhanced-audio-driver-performance">Enhanced Audio Driver Performance</h2>
+<p>The current audio driver uses a 2N3904 and 2N3906 transistor pair to generate tones. This design is simple and works well, but the output signal quality is limited by the characteristics of the transistor stage.<br>
+<br></p>
+<p>For Hardware V2.0, a dedicated Class-D amplifier IC would offer several improvements:</p>
+<ul>
+<li>Higher power efficiency  </li>
+<li>Louder and cleaner audio output  </li>
+<li>Lower heat generation  </li>
+<li>Better handling of different speaker impedances  </li>
+</ul>
+<p>A Class-D amplifier would also produce clearer tones, which is beneficial during operation in loud environments.</p>
+<h2 id="pcb-layout-refinements">PCB Layout Refinements</h2>
+<p>The current PCB fully meets the subsystem’s needs, but several layout improvements could make assembly and performance even better.<br>
+<br></p>
+<p>Possible improvements for Version 2.0 include:</p>
+<ul>
+<li>Shorter traces between the speaker driver and the output connector  </li>
+<li>Improved ground-plane structure for reduced noise  </li>
+<li>Additional test points for easier debugging  </li>
+<li>Clearer silkscreen labels for connectors and components  </li>
+<li>More separation between low-current logic signals and speaker currents  </li>
+</ul>
+<p>These refinements would make the board easier to manufacture, test, and maintain.</p>
+<h2 id="improved-connector-and-wiring-durability">Improved Connector and Wiring Durability</h2>
+<p>The subsystem currently uses standard male header pins for signal and speaker connections. While suitable for prototyping, these connectors can loosen or disconnect if the board is moved.<br>
+<br></p>
+<p>For Version 2.0, using locking JST or Molex connectors would increase mechanical durability. Adding strain relief for the speaker wires would help prevent fatigue or accidental disconnection during transport or handling.</p>
+<h2 id="opportunities-for-modularization">Opportunities for Modularization</h2>
+<p>A future version of the subsystem could be designed with more modular features.<br>
+<br></p>
+<p>Examples of possible improvements include:</p>
+<ul>
+<li>A detachable connector interface for quick subsystem replacement  </li>
+<li>A breakout header for debugging or additional audio features  </li>
+<li>Optional solder pads for alternate speaker output stages  </li>
+<li>Compatibility with larger Class-D amplifier modules if needed  </li>
+</ul>
+<p>A modular approach would make the subsystem more adaptable for future team projects.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>The current Audio and Alert subsystem fulfills all project requirements and performs reliably. However, several improvements such as upgraded power regulation, a dedicated audio amplifier, PCB layout refinements, and more durable connectors could significantly enhance Version 2.0 of the hardware.<br>
+<br></p>
+<p>These proposed changes build upon a solid foundation and reflect the practical insights gained during testing and system integration. Although not required for this project, implementing them in a future revision would create a more efficient, robust, and maintainable subsystem.</p>
 
 
 
@@ -891,7 +1109,8 @@
 
 
 
-
+  
+  
 
 
 
