@@ -3,12 +3,37 @@ title: Code
 ---
 
 ## Overview
-This is my MP Lab Code for the speaker subsystem project. It is set up so when it starts up it beeps and the green LED turns on so you know the system has power. Then the red LED will light up and blink when the project is armed and ready for sensing. 
-<br> <br>
-When the light sensor sends a 5V signal the speaker beeps 3 times. On the other hand when the moisture sensor stops sending a signal it beeps 2 times. This is supposed to indicate when the plant doesn't have enough light or if the moisture sensor loses connection to the system for any reason.
+This page contains the full firmware, pinout table, MCC configuration screenshot, and the downloadable MPLAB X project for the Audio and Alert Subsystem. The subsystem uses the PIC18F57Q43 Curiosity Nano to generate PWM tones and process sensor signals for light and moisture detection.
 
-<br><br>
+On startup the system emits a confirmation beep and flashes the LED to show that the device is powered. The firmware monitors two sensor inputs. The light sensor on RA2 is active high and triggers a three beep alert when a rising edge is confirmed. The moisture sensor on RB0 is active low and triggers a two beep alert when a falling edge is confirmed. After any alert the firmware waits for both sensors to return to idle before rearming.
 
+This page also documents which microcontroller pins are used by the subsystem so the code and hardware can be reproduced.
+
+---
+
+## Pinout Table
+The following table lists the PIC18F57Q43 pins used in this subsystem along with their direction and purpose.
+
+| PIC Pin | Port/Bit | Direction | Function | Subsystem Role | Notes |
+|---------|----------|-----------|----------|----------------|-------|
+| RA2     | PORTAbits.RA2 | Input | Light sensor input | Detects high level light events | Configured as digital input in TRIS and ANSEL |
+| RB0     | PORTBbits.RB0 | Input | Moisture sensor input | Detects low level moisture events | Internal weak pull up enabled |
+| RC7     | LATCbits.LATC7 | Output | PWM audio output | Drives PWM tone to the speaker driver | Uses PWM1 16BIT module |
+| RC4     | LATCbits.LATC4 | Output | LED indicator | Provides heartbeat and ready feedback | Active low LED |
+| VDD/GND | Power pins | Power | Supply rails | Provide regulated 5 V power and ground | Powered from 5 V adapter |
+
+---
+
+## MCC Pin Configuration Screenshot
+
+![Pinout-Table](Pinout-Table.png)
+
+The screenshot above shows the final MCC pin configuration used for the subsystem. It includes all input and output assignments that appear in the firmware.
+
+---
+
+## Full Source Code
+The complete firmware is shown below. This is the same version included in the downloadable MPLAB X project zip file.
 ```
 /* Sensors: RA2 (light, active HIGH), RB0 (moisture, active LOW)
    - Light: beep on confirmed rising edge (0->1)
