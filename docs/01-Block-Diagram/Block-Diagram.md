@@ -1,16 +1,15 @@
 ---
-Individal Block Diagram
+title: Individual Block Diagram
 ---
 
 ## Overview
-This block diagram shows my design for a speaker system for Team 201: The Irri-gators water system product. The Microchip pic18F57Q43 Curiosity Nano Board processes input from the 8-pin connector, which then sends a signal to the op amp for amplification, then to the speaker for sound generation. There's a 5 volt 1.5 amp voltage regulator to provide a consistent and stable power source for the components. Also included is a button and LED for testing purposes. Overall, this diagram shows how the system works, how it's tested, and how it's designed to integrate into the rest of my teams systems. 
+This block diagram represents my Audio and Alert subsystem for Team 201: The Irri-Gators Garden Buddy project. The Microchip PIC18F57Q43 Curiosity Nano receives sensor signals from the 8-pin ribbon connector and processes them to determine when audio alerts should be generated. The microcontroller outputs a PWM signal that feeds a complementary transistor driver stage (2N3904 + 2N3906), which provides the necessary current to drive an 8 Ω speaker. A regulated +5 V supply powers the entire subsystem, and an LM7805 footprint is included on the PCB for compatibility with unregulated inputs, though it is bypassed when using a regulated 5 V adapter.
 
+The subsystem also includes a local LED indicator and a pushbutton for testing and debugging without requiring connection to the main hub. This diagram shows how signals flow through the system, how the power architecture supports the components, and how the subsystem integrates with the overall Garden Buddy design.
 
-## Block Diagram 
- 
+## Block Diagram
+
 ![BlockDiagram](BlockDiagramRW.png)
 <br><br>
 
-You can find a downloadable PDF of the block diagram [here](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/01-Block-Diagram/BlockDiagramRW.pdf).
-
-
+A downloadable PDF of the block diagram is available [here](https://raw.githubusercontent.com/rmwirt-source/rmwirt-source.github.io/main/docs/01-Block-Diagram/BlockDiagramRW.pdf).
