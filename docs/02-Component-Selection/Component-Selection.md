@@ -6,17 +6,17 @@ title: Component Selection
 
 ---
 
-### 1. Rail-to-Rail Op-Amp (Signal Conditioning)
+### 1. Speaker Signal Conditioning (Transistor Options)
 
 | Solution | Pros | Cons | Cost | DigiKey | Picture |
-|----------|------|------|------:|---------|--------|
-| **MCP6004-I/P (already in kit)** | - Already available<br>- Rail-to-rail I/O<br>- Compatible with 5 V PIC supply | - Limited bandwidth (1 MHz)<br>- Low output current drive (~0.6 mA typical) | $0.44 | [MCP6004 DigiKey](https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060) | <img src="https://github.com/user-attachments/assets/f6fecd63-522c-47dc-affc-7346e519ad36" alt="MCP6004" width="120" /> |
-| LM358 Dual Op-Amp | - Low cost<br>- Widely available<br>- Can handle dual-signal inputs | - Not rail-to-rail<br>- Slightly higher offset voltage (~2 mV)<br>- Lower output swing near ground | $0.25 | [LM358 DigiKey](https://www.digikey.com/en/products/detail/stmicroelectronics/LM358DT/591693) | <img src="https://github.com/user-attachments/assets/8139f031-292d-494d-ae0a-b5134d419061" alt="LM358" width="120" /> |
-| TLV2372 Rail-to-Rail Op-Amp | - Rail-to-rail input/output<br>- Low noise (8 nV/√Hz)<br>- Higher bandwidth (3 MHz)<br>- Small footprint | - Slightly more expensive | $0.85 | [TLV2372 DigiKey](https://www.digikey.com/en/products/detail/texas-instruments/TLV2372IDR/381216) | <img src="https://github.com/user-attachments/assets/d1e9d01a-b685-4323-860b-a36365ad96ae" alt="TLV2372" width="120" /> |
+|----------|------|------|------:|---------|---------|
+| **2N3904 (NPN) + 2N3906 (PNP) (already in kit)** | - Complementary BJT pair for push-pull output<br>- Very low cost<br>- Works well with PIC PWM<br>- Simple design | - Limited current (≈200–300 mA)<br>- Not suitable for loud/high-power audio | ~$0.10 combined | [2N3904](https://www.digikey.com/en/products/detail/lumimax-optoelectronic-technology/2N3904/22116349)<br>[2N3906](https://www.digikey.com/en/products/detail/lumimax-optoelectronic-technology/2N3906/22116343) |![2N3906](https://github.com/user-attachments/assets/fa75cb63-4de4-4150-b3bc-0b110ac82301)|
+| Single NPN Driver (2N2222 or 2N3904) | - Simplest design<br>- Easy low-side switching<br>- Good for short beeps | - Lower volume<br>- Not push-pull<br>- Only pulls to ground | ~$0.05 | [2N2222](https://www.digikey.com/en/products/detail/onsemi/2N2222/33077) |![2N2222](https://github.com/user-attachments/assets/69ea7552-7565-4d7f-a179-7653fd5d176a)|
+| Logic-Level MOSFET (N-Channel, Si2302) | - Higher current capability<br>- Low heat / low Rds(on)<br>- Efficient for PWM tones | - Not in kit<br>- More sensitive to wiring/layout | ~$0.30 | [Si2302](https://www.digikey.com/en/products/detail/mcc-micro-commercial-components/SI2302-TP/1793243) | ![Si2302](https://github.com/user-attachments/assets/244a0dfa-d4ad-462e-ae66-8da078ac7b3c)|
 
-**Choice:** MCP6004-I/P  
+**Choice:** 2N3904 + 2N3906  
 **Rationale:**  
-Selected for its rail-to-rail operation and 5 V compatibility, enabling accurate low-level signal amplification without output clipping. It provides sufficient bandwidth for sensor signals while maintaining simplicity and low cost compared to higher-performance options.
+Provides a simple, low-cost push-pull transistor driver compatible with the PIC’s PWM output. It supplies enough current for the 8 Ω speaker while keeping the circuit compact and easy to implement.
 
 
 ---
