@@ -1,51 +1,35 @@
 ---
-title: Welcome
+Welcome
 ---
-
 <center>
-<font size="6">Rylee Wirt – Controller Module Datasheet</font><br>
+<font size= "6">Rylee Wirt Datasheet</font><br>
 as part of<br>
-<font size="8">EGR 314 Rover Project</font><br>
+<font size= "8"> Garden Buddy</font><br>
 for<br>
-<font size="5">Team 301</font><br>
+<font size= "5"> Team 201 </font><br>
 
-**Submission: May 4, 2026**
+**Submission: October 26, 2025**
 </center>
-
----
 
 ## Introduction
 
-This datasheet documents the design of the Controller Module for Team 301’s EGR 314 rover system. The controller module is responsible for receiving user input, processing control logic, and transmitting structured command messages to other subsystems within the rover architecture.
+This datasheet documents the Audio and Alert subsystem I designed for Team 201’s Garden Buddy project. The subsystem provides audible and visual feedback to indicate system status, alerts, and fault conditions. It uses a Microchip PIC18F57Q43 Curiosity Nano to process sensor inputs received through an 8-pin ribbon connector, and a complementary transistor push-pull driver (2N3904 + 2N3906) to drive an 8 Ω speaker using PWM. Power is supplied by a regulated +5 V rail. An LM7805 footprint is included on the PCB for compatibility with unregulated inputs but is bypassed when a regulated 5 V adapter is used.
 
-The module is built around an ESP32 microcontroller operating at 3.3 V logic. It communicates with other team modules over the defined system bus and manages command generation, message formatting, and control coordination. Stable 3.3 V regulation is used to ensure reliable digital communication and consistent system behavior.
+This datasheet contains the BOM, schematic, power budget, PCB images, and code used in the subsystem, along with design rationale and testing information. For the full system documentation, see the team website.
 
-This document provides the technical details of the controller module, including requirements, block diagram, component selection, bill of materials, schematic, and power budget.
+### Project Summary
 
----
+Team 201: The Irri-Gators is developing an irrigation control system that monitors plant moisture conditions and activates watering when needed. The overall system integrates sensors, actuators, and microcontroller-based logic. My portion of the project focuses on the Audio and Alert subsystem, which generates sound-based notifications to indicate system activity, warnings, and possible errors.
 
-## System Context
+The subsystem uses a PIC18F57Q43 Curiosity Nano to interpret sensor signals sent over an 8-pin ribbon connector. The microcontroller then produces PWM output that is amplified by a complementary 2N3904 / 2N3906 transistor stage and sent to an 8 Ω speaker for audible alerts. The subsystem is powered from a regulated 5 V supply to maintain consistent and stable operation.
 
-The rover system consists of multiple distributed modules connected through a shared communication structure. Each module has a defined role and address within the architecture.
+This datasheet represents one part of our complete project documentation. To explore the full system, visit the team report at:
+https://asu-egr304-2025-f-201.github.io
 
-The controller module functions as the primary command source. It interprets control inputs and transmits properly formatted packets to motor, sensor, and support modules. Clear signal routing, defined voltage levels, and reliable communication are critical to ensure predictable rover operation.
+### My Contribution
 
----
+My contribution to Team 201 involves designing, testing, and documenting the speaker subsystem. This subsystem provides a dependable method for generating audio alerts that help users understand system behavior or detect errors. I worked with my teammates to define electrical interfaces, ensure power compatibility, and integrate the subsystem cleanly with the overall Garden Buddy architecture.
 
-## My Contribution
+This datasheet guides readers through the technical aspects of my subsystem. The “BOM” section lists the major components used in the design. The schematic, power budget, PCB layout, and testing sections provide further detail on the electrical performance and design decisions. Together, these sections explain how the speaker subsystem supports Team 201’s Garden Buddy project.
 
-My responsibility on Team 301 includes:
-
-- Defining controller module requirements  
-- Designing the block diagram and communication interface  
-- Selecting and justifying hardware components  
-- Developing the schematic  
-- Creating and analyzing the power budget  
-- Documenting the complete electrical design  
-
-This datasheet explains how the controller module satisfies functional requirements and integrates with the overall rover system architecture.
-
- ---
- 
-For complete system level documentation, visit the Team 301 website:  
-https://asu-egr314-301-s-2026.github.io/EGR314-Team301/
+To review the materials used in this design, see the [BOM](https://rmwirt-source.github.io/03-BOM/BOM) section of the datasheet.
