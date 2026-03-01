@@ -24,7 +24,7 @@
 
     
       
-        <title>Welcome - EGR 304 Data Sheet</title>
+        <title>EGR 304 Data Sheet</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#welcome" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome
+              Home
             
           </span>
         </div>
@@ -205,7 +205,7 @@
   
     
   
-  Welcome
+  Home
 
       </a>
     </li>
@@ -480,7 +480,7 @@
           
   
   <span class="md-ellipsis">
-    Welcome
+    Home
   </span>
   
 
@@ -491,7 +491,7 @@
         
   
   <span class="md-ellipsis">
-    Welcome
+    Home
   </span>
   
 
@@ -511,29 +511,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#welcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       Introduction
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#system-context" class="md-nav__link">
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-summary" class="md-nav__link">
     <span class="md-ellipsis">
-      System Context
+      Project Summary
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#my-contribution" class="md-nav__link">
     <span class="md-ellipsis">
       My Contribution
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1030,29 +1045,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#welcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       Introduction
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#system-context" class="md-nav__link">
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-summary" class="md-nav__link">
     <span class="md-ellipsis">
-      System Context
+      Project Summary
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#my-contribution" class="md-nav__link">
     <span class="md-ellipsis">
       My Contribution
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1079,49 +1109,36 @@
   
 
 
-  <h1>Welcome</h1>
+  <h1>Home</h1>
 
+<hr>
+<h2 id="welcome">Welcome</h2>
 <p></p><center>
-<font size="6">Rylee Wirt – Controller Module Datasheet</font><br>
+<font size="6">Rylee Wirt Datasheet</font><br>
 as part of<br>
-<font size="8">EGR 314 Rover Project</font><br>
+<font size="8"> Garden Buddy</font><br>
 for<br>
-<font size="5">Team 301</font><br><p></p>
-<p><strong>Submission: May 4, 2026</strong>
+<font size="5"> Team 201 </font><br><p></p>
+<p><strong>Submission: October 26, 2025</strong>
 </p></center><p></p>
-<hr>
 <h2 id="introduction">Introduction</h2>
-<p>This datasheet documents the design of the Controller Module for Team 301’s EGR 314 rover system. The controller module is responsible for receiving user input, processing control logic, and transmitting structured command messages to other subsystems within the rover architecture.</p>
-<p>The module is built around an ESP32 microcontroller operating at 3.3 V logic. It communicates with other team modules over the defined system bus and manages command generation, message formatting, and control coordination. Stable 3.3 V regulation is used to ensure reliable digital communication and consistent system behavior.</p>
-<p>This document provides the technical details of the controller module, including requirements, block diagram, component selection, bill of materials, schematic, and power budget.</p>
-<hr>
-<h2 id="system-context">System Context</h2>
-<p>The rover system consists of multiple distributed modules connected through a shared communication structure. Each module has a defined role and address within the architecture.</p>
-<p>The controller module functions as the primary command source. It interprets control inputs and transmits properly formatted packets to motor, sensor, and support modules. Clear signal routing, defined voltage levels, and reliable communication are critical to ensure predictable rover operation.</p>
-<hr>
-<h2 id="my-contribution">My Contribution</h2>
-<p>My responsibility on Team 301 includes:</p>
-<ul>
-<li>Defining controller module requirements  </li>
-<li>Designing the block diagram and communication interface  </li>
-<li>Selecting and justifying hardware components  </li>
-<li>Developing the schematic  </li>
-<li>Creating and analyzing the power budget  </li>
-<li>Documenting the complete electrical design  </li>
-</ul>
-<p>This datasheet explains how the controller module satisfies functional requirements and integrates with the overall rover system architecture.</p>
-<hr>
-<p>For complete system level documentation, visit the Team 301 website:<br>
-https://asu-egr314-301-s-2026.github.io/EGR314-Team301/</p>
+<p>This datasheet documents the Audio and Alert subsystem I designed for Team 201’s Garden Buddy project. The subsystem provides audible and visual feedback to indicate system status, alerts, and fault conditions. It uses a Microchip PIC18F57Q43 Curiosity Nano to process sensor inputs received through an 8-pin ribbon connector, and a complementary transistor push-pull driver (2N3904 + 2N3906) to drive an 8 Ω speaker using PWM. Power is supplied by a regulated +5 V rail. An LM7805 footprint is included on the PCB for compatibility with unregulated inputs but is bypassed when a regulated 5 V adapter is used.</p>
+<p>This datasheet contains the BOM, schematic, power budget, PCB images, and code used in the subsystem, along with design rationale and testing information. For the full system documentation, see the team website.</p>
+<h3 id="project-summary">Project Summary</h3>
+<p>Team 201: The Irri-Gators is developing an irrigation control system that monitors plant moisture conditions and activates watering when needed. The overall system integrates sensors, actuators, and microcontroller-based logic. My portion of the project focuses on the Audio and Alert subsystem, which generates sound-based notifications to indicate system activity, warnings, and possible errors.</p>
+<p>The subsystem uses a PIC18F57Q43 Curiosity Nano to interpret sensor signals sent over an 8-pin ribbon connector. The microcontroller then produces PWM output that is amplified by a complementary 2N3904 / 2N3906 transistor stage and sent to an 8 Ω speaker for audible alerts. The subsystem is powered from a regulated 5 V supply to maintain consistent and stable operation.</p>
+<p>This datasheet represents one part of our complete project documentation. To explore the full system, visit the team report at:
+https://asu-egr304-2025-f-201.github.io</p>
+<h3 id="my-contribution">My Contribution</h3>
+<p>My contribution to Team 201 involves designing, testing, and documenting the speaker subsystem. This subsystem provides a dependable method for generating audio alerts that help users understand system behavior or detect errors. I worked with my teammates to define electrical interfaces, ensure power compatibility, and integrate the subsystem cleanly with the overall Garden Buddy architecture.</p>
+<p>This datasheet guides readers through the technical aspects of my subsystem. The “BOM” section lists the major components used in the design. The schematic, power budget, PCB layout, and testing sections provide further detail on the electrical performance and design decisions. Together, these sections explain how the speaker subsystem supports Team 201’s Garden Buddy project.</p>
+<p>To review the materials used in this design, see the <a href="https://rmwirt-source.github.io/03-BOM/BOM">BOM</a> section of the datasheet.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
